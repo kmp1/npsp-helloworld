@@ -53,11 +53,11 @@ If you do use this example as a starting point then after successfully pushing t
 
 To test that numpy and scipy can be imported and used visit
 
-http://<yourapp>.herokuapp.com/numpy
+http://yourapp.herokuapp.com/numpy
 
 and
 
-http://<yourapp>.herokuapp.com/scipy
+http://yourapp.herokuapp.com/scipy
 
 to invoke some tests.
 
