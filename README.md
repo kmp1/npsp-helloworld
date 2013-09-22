@@ -2,9 +2,9 @@ npsp-helloworld
 ======================
 
 
-A 'hello world' type app using numpy and scipy for the Heroku cloud computing platform.
+A 'hello world' type app using numpy and scipy for the Heroku cloud computing platform.  Originally from https://github.com/wyn/npsp-helloworld.
 
-This is an toy example application that demonstrates the simplest use of numpy and scipy libraries on Heroku as installed via the custom buildpack at git://github.com/wyn/heroku-buildpack-python.git
+This is an toy example application that demonstrates the simplest use of numpy and scipy libraries on Heroku as installed via the custom buildpack at https://github.com/kmp1/heroku-buildpack-python
 
 It is simply supposed to show that the buildpack works in so much as you can create an app with it and then import numpy and scipy and run some tests on a heroku dyno.
 
@@ -17,11 +17,9 @@ Installation
 Set up a local python heroku folder as described here: 
 https://devcenter.heroku.com/articles/python
 
-however you will need to do two things differently,
+however you will need to do one thing differently,:
 
-1) use my custom buildpack (see below),
-
-2) do not use the requirements.txt file; use a setup.py file instead.
+Use my custom buildpack (see below),
 
 Feel free to clone this repo as a starting point for a working app.
 
@@ -30,16 +28,16 @@ Custom buildpack
 
 When it comes time to create the app use my custom buildpack as so:
 
-$ heroku create <appname> --stack=cedar --buildpack=git://github.com/wyn/heroku-buildpack-python.git
+$ heroku create <appname> --stack=cedar --buildpack=https://github.com/kmp1/heroku-buildpack-python.git
 
 or, if you already have an app set up you can change the buildpack via:
 
-$ heroku config:add BUILDPACK_URL=git://github.com/wyn/heroku-buildpack-python.git
+$ heroku config:add BUILDPACK_URL=https://github.com/kmp1/heroku-buildpack-python.git
 
 Now when you push changes up to your app you should see log information about 'recognising numpy/scipy'.
 Any further changes to the same app should result in Heroku recognising numpy/scipy and using its (now) cached versions.
 
-The slug size for this toy app comes to about 35M.
+The slug size for this toy app comes to about 148M.
 
 Notes
 ======================
